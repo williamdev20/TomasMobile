@@ -3,7 +3,9 @@ import { StyleSheet, View, Text, Image } from 'react-native';
 export default function Header() {
   return (
     <View style={styles.container}>
-      <View style={styles.circle} />
+      <View style={styles.circle}>
+        <Image source={require('../../assets/img/phone.png')} style={styles.phoneImage}/>
+      </View>
       <Text style={styles.title}>COMECE SUA JORNADA</Text>
       <Text style={styles.text}>Descubra como a IA pode facilitar sua rotina com poucos cliques</Text>
     </View>
@@ -18,10 +20,16 @@ const styles = StyleSheet.create({
     gap: 20
   },
   circle: {
+    alignItems: 'center',
+    justifyContent: 'center',
     width: 90,
     height: 90,
     borderRadius: 45,
     backgroundColor: '#618CF0'
+  },
+  phoneImage: {
+    width: 75,
+    height: 75
   },
   title: {
     height: 70,
