@@ -13,12 +13,16 @@ export default function Home() {
         title="Continuar com uma conta"
         background="#fff"
         textColor="#2A66F6"
+        href="/cadastro"
         />
         <OrDivider />
         <Button 
         title="Continuar com o Google"
         background="#2A66F6"
         textColor="#fff"
+        onPress={() => {
+          alert("Você continuou com o Google");
+        }}
         />
       </View>
       <Footer />
