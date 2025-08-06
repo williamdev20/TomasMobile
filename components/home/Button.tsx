@@ -2,32 +2,29 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 export default function Button({ title, background, textColor }) {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={[styles.button, {backgroundColor: background}]}>
-        <Text style={[styles.text, {color: textColor}]}>
-          {title}
-        </Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity style={[styles.button, {backgroundColor: background}]}>
+      <Text style={[styles.text, {color: textColor}]}>
+        {title}
+      </Text>
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   button: {
     width: 300,
     height: 40,
-    borderRadius: 50,
+    borderRadius: 70,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
+    marginVertical: 8,
+    borderWidth: 1,
+    borderColor: '#fff',
+    borderRadius: 70
   },
   text: {
     textAlign: 'center',
-    paddingHorizontal: 12,
+    width: 200
   }
 });
